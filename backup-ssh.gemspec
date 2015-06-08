@@ -3,12 +3,12 @@
 require File.expand_path('lib/backup/version')
 
 Gem::Specification.new do |gem|
-  gem.name        = 'backup'
+  gem.name        = 'backup-ssh'
   gem.version     = Backup::VERSION
   gem.platform    = Gem::Platform::RUBY
-  gem.authors     = 'Michael van Rooijen'
-  gem.email       = 'meskyanichi@gmail.com'
-  gem.homepage    = 'https://github.com/backup/backup'
+  gem.authors     = 'Manuel Meurer'
+  gem.email       = 'manuel@krautcomputing.com'
+  gem.homepage    = 'https://github.com/krautcomputing/backup/tree/ssh'
   gem.license     = 'MIT'
   gem.summary     = 'Provides an elegant DSL in Ruby for performing backups on UNIX-like systems.'
   gem.description = <<-EOS.gsub(/\s+/, ' ').strip
