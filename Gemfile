@@ -34,10 +34,11 @@ group :production do
   gem 'twitter'
   gem 'hipchat'
   gem 'flowdock'
-  gem 'json'
+  gem 'json', '~> 1.8', '>= 1.8.3'
   gem 'dogapi'
   gem 'aws-ses'
   gem 'qiniu', '~> 6.5.1'
+  gem 'builder', '~> 3.2', '>= 3.2.3'
 end
 
 gem 'rspec'
