@@ -116,8 +116,8 @@ module Backup
 
       def credential_options
         opts = []
-        opts << "--user=#{ Shellwords.escape(username) }" if username
-        opts << "--password=#{ Shellwords.escape(password) }" if password
+        opts << "--user='#{ Shellwords.escape(username) }'" if username
+        opts << "--password='#{ Shellwords.escape(password) }'" if password
         opts.join(' ')
       end
 
