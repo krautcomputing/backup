@@ -105,13 +105,17 @@ module Backup
       private
 
       def mysqldump
-        "#{ ssh_option } #{ utility(:mysqldump) } #{ user_options } #{ credential_options } " +
-        "#{ connectivity_options } #{ name_option } " +
-        "#{ tables_to_dump } #{ tables_to_skip }"
-      end
-
-      def ssh_option
-        "ssh #{ssh}" if ssh
+        [
+          ("ssh #{ssh}" if ssh),
+          ("MYSQL_PWD='#{Shellwords.escape(password)}'" if password),
+          utility(:mysqldump),
+          user_options,
+          ("--user='#{Shellwords.escape(username)}'" if username),
+          connectivity_options,
+          name_option,
+          tables_to_dump,
+          tables_to_skip
+        ].compact.join(' ')
       end
 
       def credential_options
