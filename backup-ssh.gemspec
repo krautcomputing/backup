@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.platform    = Gem::Platform::RUBY
   gem.authors     = 'Manuel Meurer'
   gem.email       = 'manuel@krautcomputing.com'
-  gem.homepage    = 'https://github.com/krautcomputing/backup/tree/ssh'
+  gem.homepage    = 'https://github.com/manuelmeurer/backup'
   gem.license     = 'MIT'
   gem.summary     = 'Provides an elegant DSL in Ruby for performing backups on UNIX-like systems.'
   gem.description = <<-EOS.gsub(/\s+/, ' ').strip
